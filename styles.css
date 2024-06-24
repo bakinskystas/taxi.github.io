@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+header {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.stats {
+    padding: 20px;
+    background: #e9ecef;
+}
+
+.stats p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.buttons {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin: 10px 0;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.notification,
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 300px;
+    max-width: 80%;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+}
+
+.notification-content,
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notification-content header,
+.modal-content header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button {
+    background: red;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.timer {
+    font-size: 20px;
+    margin-top: 10px;
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
